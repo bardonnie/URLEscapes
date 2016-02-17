@@ -12,7 +12,8 @@
 
 #define UE_DEBUG 0
 
-int HexCharToInt(const char c) {
+int HexCharToInt(const char c)
+{
     if (c >= '0' && c <= '9') {
         return (c - '0');
     } else if (c >= 'a' && c <= 'f') {
@@ -24,7 +25,8 @@ int HexCharToInt(const char c) {
     }
 }
 
-int HexStringToInt(const char *hex) {
+int HexStringToInt(const char *hex)
+{
     int ret = 0;
     
     if (NULL != hex) {
@@ -43,7 +45,8 @@ int HexStringToInt(const char *hex) {
     return ret;
 }
 
-- (NSString *)escapedURLString {
+- (NSString *)escapedURLString
+{
     NSString *ret = self;
     char *src = (char *)[self UTF8String];
     
@@ -80,7 +83,8 @@ int HexStringToInt(const char *hex) {
     return ret;
 }
 
-- (NSString *)originalURLString {
+- (NSString *)originalURLString
+{
     NSString *ret = self;
     
     const char *src = [self UTF8String];
