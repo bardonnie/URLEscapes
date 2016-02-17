@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @end
 
 @implementation ViewController
@@ -19,15 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    // url encode
-    NSString *urlString = @"http://www.wecook.cn?link=http://wecook.cn//egret//index.html?platInfo=open_86_18269&wy_game=170&wy_user=389&wy_bs=abc&isiframe=0&isapp=true&game=味库";
-    NSString *query = [urlString escapedURLString];
-    NSLog(@"query - %@", query);
-    
-    // ASCII in url -> url decode
-    NSString *query1 = [query originalURLString];
-    NSLog(@"query1 - %@", query1);
+}
+
+#pragma mark - Action
+
+- (IBAction)go:(id)sender
+{
+    static NSInteger i = 0;
+    if (i%2 == 0) {
+        // url encode
+        NSString *query = [self.textView.text escapedURLString];
+        self.textView.text = query;
+    } else{
+        // ASCII in url -> url decode
+        NSString *query = [self.textView.text originalURLString];
+        self.textView.text = query;
+    }
+    i++;
 }
 
 - (void)didReceiveMemoryWarning {
