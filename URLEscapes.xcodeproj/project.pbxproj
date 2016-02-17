@@ -13,6 +13,7 @@
 		AC134AA01C7327FF00861023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC134A9E1C7327FF00861023 /* Main.storyboard */; };
 		AC134AA21C7327FF00861023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC134AA11C7327FF00861023 /* Assets.xcassets */; };
 		AC134AA51C7327FF00861023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC134AA31C7327FF00861023 /* LaunchScreen.storyboard */; };
+		AC134AAF1C73282F00861023 /* NSString+URLEscapes.m in Sources */ = {isa = PBXBuildFile; fileRef = AC134AAE1C73282F00861023 /* NSString+URLEscapes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		AC134AA11C7327FF00861023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC134AA41C7327FF00861023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC134AA61C7327FF00861023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC134AAD1C73282F00861023 /* NSString+URLEscapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEscapes.h"; sourceTree = "<group>"; };
+		AC134AAE1C73282F00861023 /* NSString+URLEscapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEscapes.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		AC134A891C7327FF00861023 = {
 			isa = PBXGroup;
 			children = (
+				AC134AAC1C73282F00861023 /* NSString+URLEscapes */,
 				AC134A941C7327FF00861023 /* URLEscapes */,
 				AC134A931C7327FF00861023 /* Products */,
 			);
@@ -77,6 +81,15 @@
 				AC134A961C7327FF00861023 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC134AAC1C73282F00861023 /* NSString+URLEscapes */ = {
+			isa = PBXGroup;
+			children = (
+				AC134AAD1C73282F00861023 /* NSString+URLEscapes.h */,
+				AC134AAE1C73282F00861023 /* NSString+URLEscapes.m */,
+			);
+			path = "NSString+URLEscapes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,7 @@
 			files = (
 				AC134A9D1C7327FF00861023 /* ViewController.m in Sources */,
 				AC134A9A1C7327FF00861023 /* AppDelegate.m in Sources */,
+				AC134AAF1C73282F00861023 /* NSString+URLEscapes.m in Sources */,
 				AC134A971C7327FF00861023 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
