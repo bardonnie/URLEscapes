@@ -28,15 +28,15 @@
 - (IBAction)go:(id)sender
 {
     static NSInteger i = 0;
+    NSString *str = @"";
     if (i%2 == 0) {
         // url encode
-        NSString *query = [self.textView.text escapedURLString];
-        self.textView.text = query;
+        str = [self.textView.text escapedURLString];
     } else{
         // ASCII in url -> url decode
-        NSString *query = [self.textView.text originalURLString];
-        self.textView.text = query;
+        str = [self.textView.text originalURLString];
     }
+    self.textView.text = str;
     i++;
 }
 
